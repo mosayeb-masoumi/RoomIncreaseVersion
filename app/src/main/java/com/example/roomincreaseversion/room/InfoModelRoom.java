@@ -21,10 +21,15 @@ public class InfoModelRoom {
     @ColumnInfo(name = "male")
     private Boolean male;
 
-    public InfoModelRoom(String name, int age, Boolean male) {
+    @ColumnInfo(name = "family")
+    private String family;
+
+
+    public InfoModelRoom(String name, int age, Boolean male, String family) {
         this.name = name;
         this.age = age;
         this.male = male;
+        this.family = family;
     }
 
     public int getId() {
@@ -57,5 +62,13 @@ public class InfoModelRoom {
 
     public void setMale(Boolean male) {
         this.male = male;
+    }
+
+    public String getFamily() {
+        return family;
+    }
+
+    public void setFamily(String family) {
+        this.family = family;
     }
 }

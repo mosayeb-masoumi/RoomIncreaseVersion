@@ -27,20 +27,23 @@ public class MainActivity extends AppCompatActivity {
 
 
         List<ServerModel> serverList = new ArrayList<>();
-        serverList.add(new ServerModel("hassan",34, true));
-        serverList.add(new ServerModel("mina",25, false));
-        serverList.add(new ServerModel("ali",11, true));
+        serverList.add(new ServerModel("hassan",34, true , "rezai"));
+        serverList.add(new ServerModel("mina",25, false, "moradi"));
+        serverList.add(new ServerModel("ali",11, true, "hatami"));
 
 
         dbInfo = RoomInitializing.getInstance().infoModelInit(this);
-
+        dbInfo.infoModelDao().clearDB();
 
         for (int i = 0; i <serverList.size() ; i++) {
-            InfoModelRoom modelRoom = new InfoModelRoom(serverList.get(i).getName() ,serverList.get(i).getAge(),serverList.get(i).getMale());
+
+            InfoModelRoom modelRoom = new InfoModelRoom(serverList.get(i).getName() ,serverList.get(i).getAge(),
+                    serverList.get(i).getMale() , serverList.get(i).getFamily());
             dbInfo.infoModelDao().insertAll(modelRoom);
         }
 
+        List<InfoModelRoom> dblist = dbInfo.infoModelDao().getAllInfoList();
 
-        txt.setText(dbInfo.infoModelDao().getAllInfoList().get(1).getName() + " "+dbInfo.infoModelDao().getAllInfoList().get(1).getAge());
+        txt.setText(dblist.get(1).getName()+" "+ dblist.get(1).getFamily() + " "+dblist.get(1).getAge());
     }
 }

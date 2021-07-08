@@ -8,10 +8,13 @@ public class ServerModel {
     private int age;
     private Boolean male;
 
-    public ServerModel(String name, int age, Boolean male) {
+    private String family;
+
+    public ServerModel(String name, int age, Boolean male, String family) {
         this.name = name;
         this.age = age;
         this.male = male;
+        this.family = family;
     }
 
     public String getName() {
@@ -36,5 +39,13 @@ public class ServerModel {
 
     public void setMale(Boolean male) {
         this.male = male;
+    }
+
+    public String getFamily() {
+        return family;
+    }
+
+    public void setFamily(String family) {
+        this.family = family;
     }
 }
