@@ -48,11 +48,7 @@ public class UpgradeRoom {
 //
 //
 
-            /***********************************************************************************************/
-
-
-
-
+    /***********************************************************************************************/
 
 
 ////            database.execSQL("ALTER TABLE NamazModel ADD COLUMN day_of_week INTEGER DEFAULT 0 NOT NULL");
@@ -91,9 +87,6 @@ public class UpgradeRoom {
 //        }
 
 
-
-
-
 //    };
 //
 //    public static final Migration MIGRATION_4_5 = new Migration(4, 5) {
@@ -112,4 +105,29 @@ public class UpgradeRoom {
 //            database.execSQL("ALTER TABLE NamazModel ADD COLUMN namazIsActive INTEGER DEFAULT 0 NOT NULL");
 //        }
 //    };
+
+    public static final Migration MIGRATION_1_2 = new Migration(1, 2) {
+        @Override
+        public void migrate(SupportSQLiteDatabase database) {
+            // Since we didn't alter the table, there's nothing else to do here.
+            database.execSQL("ALTER TABLE InfoModelRoom ADD COLUMN family TEXT");
+        }
+    };
+
+    public static final Migration MIGRATION_2_3 = new Migration(2, 3) {
+        @Override
+        public void migrate(SupportSQLiteDatabase database) {
+            // Since we didn't alter the table, there's nothing else to do here.
+            database.execSQL("ALTER TABLE InfoModelRoom ADD COLUMN grade INTEGER");
+            database.execSQL("ALTER TABLE InfoModelRoom ADD COLUMN military_service INTEGER");
+        }
+    };
+
+    public static final Migration MIGRATION_1_3 = new Migration(1, 3) {
+        @Override
+        public void migrate(SupportSQLiteDatabase database) {
+            // Since we didn't alter the table, there's nothing else to do here.
+            database.execSQL("ALTER TABLE InfoModelRoom ADD COLUMN family TEXT");
+        }
+    };
 }
