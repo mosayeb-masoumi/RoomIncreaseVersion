@@ -9,7 +9,7 @@ import androidx.room.PrimaryKey;
 public class InfoModelRoom {
 
     @PrimaryKey(autoGenerate = true)
-    private int id;
+    private int id = 0;
 
 
     @ColumnInfo(name = "name")
