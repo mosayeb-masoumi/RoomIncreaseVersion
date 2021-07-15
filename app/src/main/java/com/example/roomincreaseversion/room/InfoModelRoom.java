@@ -7,7 +7,7 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity
-@AutoMigration (from = 1, to = 3)
+//@AutoMigration (from = 1, to = 3)
 public class InfoModelRoom {
 
     @PrimaryKey(autoGenerate = true)
