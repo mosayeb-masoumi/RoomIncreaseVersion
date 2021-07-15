@@ -1,6 +1,5 @@
 package com.example.roomincreaseversion.room;
 
-
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -21,7 +20,7 @@ public class InfoModelRoom {
     @ColumnInfo(name = "male")
     private Boolean male = false;
 
-    public InfoModelRoom(String name, int age, Boolean male) {
+    public InfoModelRoom(String name, Integer age, Boolean male) {
         this.name = name;
         this.age = age;
         this.male = male;
@@ -43,11 +42,11 @@ public class InfoModelRoom {
         this.name = name;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
