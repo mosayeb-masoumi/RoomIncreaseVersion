@@ -106,7 +106,7 @@ public class UpgradeRoom {
 //            database.execSQL("ALTER TABLE InfoModelRoom ADD COLUMN military_service INTEGER DEFAULT 0 NOT NULL"); // add boolean from V2 to V3
 
 
-            database.execSQL("CREATE TABLE IF NOT EXISTS `InfoModelRoom2` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT, `age` INTEGER, `male` INTEGER, `family` TEXT, `grade` INTEGER, `military_service` INTEGER NOT NULL)");
+            database.execSQL("CREATE TABLE IF NOT EXISTS `InfoModelRoom2` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT, `age` INTEGER, `male` INTEGER, `family` TEXT, `grade` INTEGER, `military_service` INTEGER DEFAULT 0 NOT NULL)");
             database.execSQL("INSERT INTO InfoModelRoom2(id,name,age,male) SELECT * FROM InfoModelRoom");
             database.execSQL("DROP TABLE InfoModelRoom");
             database.execSQL("ALTER TABLE InfoModelRoom2 RENAME TO InfoModelRoom");
