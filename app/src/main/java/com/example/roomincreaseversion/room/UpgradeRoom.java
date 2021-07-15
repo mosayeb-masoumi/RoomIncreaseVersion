@@ -107,7 +107,7 @@ public class UpgradeRoom {
 
 
             database.execSQL("CREATE TABLE IF NOT EXISTS `InfoModelRoom2` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT, `age` INTEGER, `male` INTEGER, `family` TEXT, `grade` INTEGER, `military_service` INTEGER NOT NULL)");
-            database.execSQL("INSERT INTO InfoModelRoom2(name,age,male) SELECT * FROM InfoModelRoom");
+            database.execSQL("INSERT INTO InfoModelRoom2(id,name,age,male) SELECT * FROM InfoModelRoom");
             database.execSQL("DROP TABLE InfoModelRoom");
             database.execSQL("ALTER TABLE InfoModelRoom2 RENAME TO InfoModelRoom");
             database.execSQL("CREATE UNIQUE INDEX IF NOT EXISTS `index_InfoModelRoom_shortName` ON `InfoModelRoom` (`shortName`)");
