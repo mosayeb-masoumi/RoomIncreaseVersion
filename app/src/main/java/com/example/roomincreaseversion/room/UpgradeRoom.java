@@ -51,11 +51,6 @@ public class UpgradeRoom {
     /***********************************************************************************************/
 
 
-////            database.execSQL("ALTER TABLE NamazModel ADD COLUMN day_of_week INTEGER DEFAULT 0 NOT NULL");
-//            database.execSQL("ALTER TABLE NamazModel ADD COLUMN morning INTEGER DEFAULT 0 NOT NULL");
-//            database.execSQL("ALTER TABLE NamazModel ADD COLUMN esha INTEGER DEFAULT 0 NOT NULL");
-
-
 //////            // Create the new table
 //            database.execSQL(
 //                    "CREATE TABLE NamazModel_new (id INTEGER, morning INTEGER, zohr INTEGER, asr INTEGER, maghreb INTEGER, esha INTEGER, ayat INTEGER, rooze INTEGER, setting_type TEXT, hour INTEGER, minute INTEGER, notif_id INTEGER, day_of_week INTEGER, civil_year INTEGER, civil_month INTEGER, civil_day INTEGER, namazEventId TEXT, namazIsActive INTEGER, PRIMARY KEY(id))");

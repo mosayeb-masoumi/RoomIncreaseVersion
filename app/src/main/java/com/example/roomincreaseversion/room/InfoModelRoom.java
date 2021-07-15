@@ -13,16 +13,16 @@ public class InfoModelRoom {
 
 
     @ColumnInfo(name = "name")
-    private String name;
+    private String name = "";
 
     @ColumnInfo(name = "age")
     private Integer age=0;
 
     @ColumnInfo(name = "male")
-    private Boolean male;
+    private Boolean male = false;
 
     @ColumnInfo(name = "family")
-    private String family;
+    private String family = "";
 
     @ColumnInfo(name = "grade")
     private Integer grade = 0;
