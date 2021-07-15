@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 3,
-    "identityHash": "c90b1a3ea6df301048d1df0de703c9b4",
+    "identityHash": "053b05319adc25d0554106bcbf280243",
     "entities": [
       {
         "tableName": "InfoModelRoom",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT, `age` INTEGER, `male` INTEGER, `family` TEXT, `grade` INTEGER)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT, `age` INTEGER, `male` INTEGER, `family` TEXT, `grade` INTEGER, `military_service` INTEGER NOT NULL)",
         "fields": [
           {
             "fieldPath": "id",
@@ -43,6 +43,12 @@
             "columnName": "grade",
             "affinity": "INTEGER",
             "notNull": false
+          },
+          {
+            "fieldPath": "military_service",
+            "columnName": "military_service",
+            "affinity": "INTEGER",
+            "notNull": true
           }
         ],
         "primaryKey": {
@@ -58,7 +64,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'c90b1a3ea6df301048d1df0de703c9b4')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '053b05319adc25d0554106bcbf280243')"
     ]
   }
 }
