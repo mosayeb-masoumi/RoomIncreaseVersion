@@ -37,14 +37,22 @@ public class MainActivity extends AppCompatActivity {
 
         for (int i = 0; i <serverList.size() ; i++) {
             InfoModelRoom modelRoom = new InfoModelRoom(serverList.get(i).getName() ,serverList.get(i).getAge()
-                    ,serverList.get(i).getMale(),serverList.get(i).getFamily(),serverList.get(i).getGrade());
+                    ,serverList.get(i).getMale(),serverList.get(i).getFamily(),serverList.get(i).getGrade() ,
+                    serverList.get(i).getMilitary_service());
             dbInfo.infoModelDao().insertAll(modelRoom);
         }
 
 
+        String military = "";
+        if(dbInfo.infoModelDao().getAllInfoList().get(1).getMilitary_service()){
+            military = "بله";
+        }else{
+            military = "خیر";
+        }
+
         txt.setText(dbInfo.infoModelDao().getAllInfoList().get(1).getName() +
                 " "+dbInfo.infoModelDao().getAllInfoList().get(1).getAge() +
-                " "+dbInfo.infoModelDao().getAllInfoList().get(1).getGrade());
+                " "+dbInfo.infoModelDao().getAllInfoList().get(1).getGrade() + " " + military);
     }
 }
 
