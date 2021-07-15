@@ -116,7 +116,7 @@ public class UpgradeRoom {
 
 //            database.execSQL("ALTER TABLE InfoModelRoom ADD COLUMN grade INTEGER DEFAULT 0 NOT NULL");
 
-            database.execSQL("ALTER TABLE 'InfoModelRoom' ADD COLUMN 'grade' INTEGER NOT NULL");
+            database.execSQL("ALTER TABLE 'InfoModelRoom' ADD COLUMN 'grade' INTEGER");
 //            database.execSQL("ALTER TABLE InfoModelRoom ADD COLUMN military_service INTEGER NOT NULL DEFAULT(0)");
         }
     };
