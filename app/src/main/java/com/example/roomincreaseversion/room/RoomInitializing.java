@@ -22,8 +22,7 @@ public class RoomInitializing {
     public AppDatabase infoModelInit(Context context) {
         dbInfo = Room.databaseBuilder(context, AppDatabase.class, "infomodel")
                 .allowMainThreadQueries()
-                .addMigrations(UpgradeRoom.MIGRATION_1_2,UpgradeRoom.MIGRATION_2_3)
-//                .addMigrations(UpgradeRoom.MIGRATION_2_3)
+                .addMigrations(UpgradeRoom.MIGRATION_1_2,UpgradeRoom.MIGRATION_2_3 , UpgradeRoom.MIGRATION_1_3)
                 .build();
 
         return dbInfo;

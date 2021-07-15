@@ -60,10 +60,8 @@ public class UpgradeRoom {
 //                    "morning INTEGER NOT NULL, zohr INTEGER NOT NULL, asr INTEGER NOT NULL, maghreb INTEGER NOT NULL, esha INTEGER NOT NULL, ayat INTEGER NOT NULL, rooze INTEGER NOT NULL, setting_type TEXT NOT NULL, hour INTEGER NOT NULL, minute INTEGER NOT NULL, notif_id INTEGER NOT NULL, day_of_week INTEGER NOT NULL, civil_year INTEGER NOT NULL, civil_month INTEGER NOT NULL, " +
 //                    "civil_day INTEGER NOT NULL, namazEventId TEXT NOT NULL, namazIsActive INTEGER NOT NULL)");
 //
-//
-//
-//
-//
+
+
 ////            // Copy the data
 //            database.execSQL(
 //                    "INSERT INTO NamazModel_new (morning, zohr, asr, maghreb, esha, ayat, rooze, setting_type, hour, minute, notif_id, namazEventId) SELECT morning, zohr, asr, maghreb, esha, ayat, rooze, setting_type, hour, minute, notif_id, namazEventId FROM NamazModel");
@@ -77,56 +75,35 @@ public class UpgradeRoom {
 //
 //
 //
-
-
-//        }
-
-
-//    };
-//
-//    public static final Migration MIGRATION_4_5 = new Migration(4, 5) {
-//        @Override
-//        public void migrate(SupportSQLiteDatabase database) {
-//            // Since we didn't alter the table, there's nothing else to do here.
-//            database.execSQL("ALTER TABLE HadisContentModelDb ADD COLUMN read INTEGER DEFAULT 0 NOT NULL");
 //        }
 //    };
 
-//
-//    public static final Migration MIGRATION_3_4 = new Migration(3, 4) {
-//        @Override
-//        public void migrate(SupportSQLiteDatabase database) {
-//            // Since we didn't alter the table, there's nothing else to do here.
-//            database.execSQL("ALTER TABLE NamazModel ADD COLUMN namazIsActive INTEGER DEFAULT 0 NOT NULL");
-//        }
-//    };
+
 
     public static final Migration MIGRATION_1_2 = new Migration(1, 2) {
         @Override
         public void migrate(SupportSQLiteDatabase database) {
-            // Since we didn't alter the table, there's nothing else to do here.
-            database.execSQL("ALTER TABLE InfoModelRoom ADD COLUMN family TEXT");
+            database.execSQL("ALTER TABLE InfoModelRoom ADD COLUMN family TEXT"); // add string
         }
     };
 
     public static final Migration MIGRATION_2_3 = new Migration(2, 3) {
         @Override
         public void migrate(SupportSQLiteDatabase database) {
-            // Since we didn't alter the table, there's nothing else to do here.
 
-//            database.execSQL("ALTER TABLE InfoModelRoom ADD COLUMN grade INTEGER DEFAULT 0 NOT NULL");
-
-            database.execSQL("ALTER TABLE 'InfoModelRoom' ADD COLUMN 'grade' INTEGER");
-//            database.execSQL("ALTER TABLE 'InfoModelRoom' ADD COLUMN 'military_service' INTEGER NOT NULL");
-            database.execSQL("ALTER TABLE InfoModelRoom ADD COLUMN military_service INTEGER DEFAULT 0 NOT NULL");
+            database.execSQL("ALTER TABLE 'InfoModelRoom' ADD COLUMN 'grade' INTEGER");  // add int
+            database.execSQL("ALTER TABLE InfoModelRoom ADD COLUMN military_service INTEGER DEFAULT 0 NOT NULL");   // add boolean
         }
     };
 
-//    public static final Migration MIGRATION_1_3 = new Migration(1, 3) {
-//        @Override
-//        public void migrate(SupportSQLiteDatabase database) {
-//            // Since we didn't alter the table, there's nothing else to do here.
-//            database.execSQL("ALTER TABLE InfoModelRoom ADD COLUMN family TEXT");
-//        }
-//    };
+
+    public static final Migration MIGRATION_1_3 = new Migration(1, 3) {
+        @Override
+        public void migrate(SupportSQLiteDatabase database) {
+            // Since we didn't alter the table, there's nothing else to do here.
+            database.execSQL("ALTER TABLE InfoModelRoom ADD COLUMN family TEXT");   // add string   from V1 to V2
+            database.execSQL("ALTER TABLE 'InfoModelRoom' ADD COLUMN 'grade' INTEGER");  // add int   from V2 to V3
+            database.execSQL("ALTER TABLE InfoModelRoom ADD COLUMN military_service INTEGER DEFAULT 0 NOT NULL"); // add boolean from V2 to V3
+        }
+    };
 }
