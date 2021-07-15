@@ -118,16 +118,16 @@ public class UpgradeRoom {
         @Override
         public void migrate(SupportSQLiteDatabase database) {
             // Since we didn't alter the table, there's nothing else to do here.
-            database.execSQL("ALTER TABLE InfoModelRoom ADD COLUMN grade INTEGER");
-            database.execSQL("ALTER TABLE InfoModelRoom ADD COLUMN military_service INTEGER");
+//            database.execSQL("ALTER TABLE InfoModelRoom ADD COLUMN grade INTEGER");
+//            database.execSQL("ALTER TABLE InfoModelRoom ADD COLUMN military_service INTEGER");
         }
     };
 
-    public static final Migration MIGRATION_1_3 = new Migration(1, 3) {
-        @Override
-        public void migrate(SupportSQLiteDatabase database) {
-            // Since we didn't alter the table, there's nothing else to do here.
-            database.execSQL("ALTER TABLE InfoModelRoom ADD COLUMN family TEXT");
-        }
-    };
+//    public static final Migration MIGRATION_1_3 = new Migration(1, 3) {
+//        @Override
+//        public void migrate(SupportSQLiteDatabase database) {
+//            // Since we didn't alter the table, there's nothing else to do here.
+//            database.execSQL("ALTER TABLE InfoModelRoom ADD COLUMN family TEXT");
+//        }
+//    };
 }

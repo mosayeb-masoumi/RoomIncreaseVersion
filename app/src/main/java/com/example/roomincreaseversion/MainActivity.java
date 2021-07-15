@@ -47,3 +47,5 @@ public class MainActivity extends AppCompatActivity {
                 " "+dbInfo.infoModelDao().getAllInfoList().get(1).getGrade());
     }
 }
+
+
