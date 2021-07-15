@@ -9,20 +9,20 @@ import androidx.room.PrimaryKey;
 public class InfoModelRoom {
 
     @PrimaryKey(autoGenerate = true)
-    private int id;
+    private int id = 0;
 
 
     @ColumnInfo(name = "name")
-    private String name;
+    private String name = "";
 
     @ColumnInfo(name = "age")
-    private int age;
+    private int age =0;
 
     @ColumnInfo(name = "male")
-    private Boolean male;
+    private Boolean male = false;
 
     @ColumnInfo(name = "family")
-    private String family;
+    private String family = "";
 
 
     public InfoModelRoom(String name, int age, Boolean male, String family) {
