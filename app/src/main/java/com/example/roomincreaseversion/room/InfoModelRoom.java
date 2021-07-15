@@ -16,7 +16,7 @@ public class InfoModelRoom {
     private String name = "";
 
     @ColumnInfo(name = "age")
-    private int age = 0;
+    private Integer age = 0;
 
     @ColumnInfo(name = "male")
     private Boolean male = false;
