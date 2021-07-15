@@ -16,7 +16,7 @@ public class InfoModelRoom {
     private String name = "";
 
     @ColumnInfo(name = "age")
-    private int age =0;
+    private Integer age =0;
 
     @ColumnInfo(name = "male")
     private Boolean male = false;
@@ -25,7 +25,7 @@ public class InfoModelRoom {
     private String family = "";
 
 
-    public InfoModelRoom(String name, int age, Boolean male, String family) {
+    public InfoModelRoom(String name, Integer age, Boolean male, String family) {
         this.name = name;
         this.age = age;
         this.male = male;
@@ -48,7 +48,7 @@ public class InfoModelRoom {
         this.name = name;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
