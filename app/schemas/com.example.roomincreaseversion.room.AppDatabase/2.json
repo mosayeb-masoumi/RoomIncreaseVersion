@@ -1,12 +1,12 @@
 {
   "formatVersion": 1,
   "database": {
-    "version": 3,
-    "identityHash": "f8686fe38ebd05ffebe5a4d160a1babc",
+    "version": 2,
+    "identityHash": "b16a53003dbee6555eb98b8906485cfb",
     "entities": [
       {
         "tableName": "InfoModelRoom",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT, `age` INTEGER, `male` INTEGER, `family` TEXT, `grade` INTEGER, `military_service` INTEGER)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT, `age` INTEGER NOT NULL, `male` INTEGER, `family` TEXT)",
         "fields": [
           {
             "fieldPath": "id",
@@ -24,7 +24,7 @@
             "fieldPath": "age",
             "columnName": "age",
             "affinity": "INTEGER",
-            "notNull": false
+            "notNull": true
           },
           {
             "fieldPath": "male",
@@ -36,18 +36,6 @@
             "fieldPath": "family",
             "columnName": "family",
             "affinity": "TEXT",
-            "notNull": false
-          },
-          {
-            "fieldPath": "grade",
-            "columnName": "grade",
-            "affinity": "INTEGER",
-            "notNull": false
-          },
-          {
-            "fieldPath": "military_service",
-            "columnName": "military_service",
-            "affinity": "INTEGER",
             "notNull": false
           }
         ],
@@ -64,7 +52,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'f8686fe38ebd05ffebe5a4d160a1babc')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'b16a53003dbee6555eb98b8906485cfb')"
     ]
   }
 }

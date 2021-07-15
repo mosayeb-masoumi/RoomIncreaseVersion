@@ -5,14 +5,14 @@ import androidx.room.ColumnInfo;
 public class ServerModel {
 
     private String name;
-    private int age;
+    private Integer age;
     private Boolean male;
 
     private String family;
-    private int grade;
+    private Integer grade;
     private Boolean military_service;
 
-    public ServerModel(String name, int age, Boolean male, String family, int grade, Boolean military_service) {
+    public ServerModel(String name, Integer age, Boolean male, String family, Integer grade, Boolean military_service) {
         this.name = name;
         this.age = age;
         this.male = male;
@@ -53,11 +53,11 @@ public class ServerModel {
         this.family = family;
     }
 
-    public int getGrade() {
+    public Integer getGrade() {
         return grade;
     }
 
-    public void setGrade(int grade) {
+    public void setGrade(Integer grade) {
         this.grade = grade;
     }
 
