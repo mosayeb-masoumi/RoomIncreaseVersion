@@ -27,18 +27,18 @@ public class InfoModelRoom {
     @ColumnInfo(name = "grade")
     private Integer grade = 0;
 
-    @ColumnInfo(name = "military_service")
-    private boolean military_service = false;
+//    @ColumnInfo(name = "military_service")
+//    private boolean military_service = false;
 
 
-    public InfoModelRoom(String name, Integer age, Boolean male, String family, Integer grade, boolean military_service) {
-//    public InfoModelRoom(String name, Integer age, Boolean male, String family, Integer grade) {
+//    public InfoModelRoom(String name, Integer age, Boolean male, String family, Integer grade, boolean military_service) {
+    public InfoModelRoom(String name, Integer age, Boolean male, String family, Integer grade) {
         this.name = name;
         this.age = age;
         this.male = male;
         this.family = family;
         this.grade = grade;
-        this.military_service = military_service;
+//        this.military_service = military_service;
     }
 
 
@@ -90,11 +90,11 @@ public class InfoModelRoom {
         this.grade = grade;
     }
 
-    public boolean getMilitary_service() {
-        return military_service;
-    }
-
-    public void setMilitary_service(boolean military_service) {
-        this.military_service = military_service;
-    }
+//    public boolean getMilitary_service() {
+//        return military_service;
+//    }
+//
+//    public void setMilitary_service(boolean military_service) {
+//        this.military_service = military_service;
+//    }
 }

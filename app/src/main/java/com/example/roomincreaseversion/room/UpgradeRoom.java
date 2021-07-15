@@ -114,7 +114,7 @@ public class UpgradeRoom {
         public void migrate(SupportSQLiteDatabase database) {
             // Since we didn't alter the table, there's nothing else to do here.
             database.execSQL("ALTER TABLE InfoModelRoom ADD COLUMN grade INTEGER DEFAULT 0 NOT NULL");
-            database.execSQL("ALTER TABLE InfoModelRoom ADD COLUMN military_service INTEGER NOT NULL DEFAULT(0)");
+//            database.execSQL("ALTER TABLE InfoModelRoom ADD COLUMN military_service INTEGER NOT NULL DEFAULT(0)");
         }
     };
 

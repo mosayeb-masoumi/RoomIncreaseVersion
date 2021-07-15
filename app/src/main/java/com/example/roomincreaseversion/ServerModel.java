@@ -13,6 +13,7 @@ public class ServerModel {
     private Boolean military_service;
 
     public ServerModel(String name, Integer age, Boolean male, String family, Integer grade, Boolean military_service) {
+//    public ServerModel(String name, Integer age, Boolean male, String family, Integer grade) {
         this.name = name;
         this.age = age;
         this.male = male;
