@@ -119,7 +119,7 @@ public class UpgradeRoom {
         public void migrate(SupportSQLiteDatabase database) {
             // Since we didn't alter the table, there's nothing else to do here.
             database.execSQL("ALTER TABLE InfoModelRoom ADD COLUMN grade TEXT");
-//            database.execSQL("ALTER TABLE InfoModelRoom ADD COLUMN military_service INTEGER");
+            database.execSQL("ALTER TABLE InfoModelRoom ADD COLUMN military_service INTEGER");
         }
     };
 
