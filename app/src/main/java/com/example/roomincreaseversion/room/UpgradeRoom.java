@@ -110,7 +110,7 @@ public class UpgradeRoom {
             database.execSQL("INSERT INTO InfoModelRoom2(id,name,age,male) SELECT * FROM InfoModelRoom");
             database.execSQL("DROP TABLE InfoModelRoom");
             database.execSQL("ALTER TABLE InfoModelRoom2 RENAME TO InfoModelRoom");
-            database.execSQL("CREATE UNIQUE INDEX IF NOT EXISTS `index_InfoModelRoom_shortName` ON `InfoModelRoom` (`shortName`)");
+//            database.execSQL("CREATE UNIQUE INDEX IF NOT EXISTS `index_InfoModelRoom_shortName` ON `InfoModelRoom` (`shortName`)");
 
 
         }
