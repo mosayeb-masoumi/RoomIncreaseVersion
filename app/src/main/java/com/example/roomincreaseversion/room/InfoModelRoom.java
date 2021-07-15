@@ -1,11 +1,13 @@
 package com.example.roomincreaseversion.room;
 
 
+import androidx.room.AutoMigration;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity
+@AutoMigration (from = 1, to = 3)
 public class InfoModelRoom {
 
     @PrimaryKey(autoGenerate = true)
